@@ -62,6 +62,9 @@ class CssRewriteFilter extends BaseCssFilter
                         $path .= '../';
                         break;
                     }
+                    if ($pos === 0) {
+                        break;
+                    }
                 }
                 $path .= ltrim(substr(dirname($sourcePath).'/', strlen($targetDir)), '/');
             }
